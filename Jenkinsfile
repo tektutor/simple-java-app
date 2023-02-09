@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 pipeline {
     agent {
-        label 'docker-slave'
+        label 'docker-jenkins-slave'
     }
     stages {
         stage('Compile') {
