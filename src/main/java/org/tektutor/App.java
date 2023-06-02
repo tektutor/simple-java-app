@@ -17,6 +17,7 @@ public class App {
     }
 
     private String getGreetingMsgFromDB() {
+      msg= "";
       try {
         Class.forName("com.mysql.jdbc.Driver");
 
