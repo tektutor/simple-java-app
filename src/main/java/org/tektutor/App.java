@@ -2,7 +2,6 @@ package org.tektutor;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.context.ApplicationContext;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
 
@@ -14,7 +13,7 @@ public class App {
     private String msg = "";
 
     public static void main ( String[] args ) {
-        ApplicationContext ctx = SpringApplication.run(App.class,args);
+        SpringApplication.run(App.class,args);
     }
 
     private String getGreetingMsgFromDB() {
@@ -39,7 +38,6 @@ public class App {
     
     @RequestMapping("/")
     public String sayHello() {
-        //return "Hello World !";
         return getGreetingMsgFromDB();
     }
 
